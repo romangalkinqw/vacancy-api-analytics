@@ -117,7 +117,7 @@ def main() -> None:
             text=query,
             area=113,
             per_page=100,
-            max_pages=5,
+            max_pages=20,
             only_with_salary=False,
             period=30,
         )
