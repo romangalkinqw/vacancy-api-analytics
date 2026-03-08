@@ -95,15 +95,7 @@ class HHClient:
     def get_vacancy(self, vacancy_id: str | int) -> dict[str, Any]:
         return self._get(f"/vacancies/{vacancy_id}")
 
-    def fetch_vacancies(
-        self,
-        text: str,
-        area: int = 113,
-        per_page: int = 100,
-        max_pages: int = 5,
-        only_with_salary: bool = False,
-        period: int | None = None,
-    ) -> list[dict[str, Any]]:
+    def fetch_vacancies(self, text: str, area: int = 113, per_page: int = 100, max_pages: int = 5, only_with_salary: bool = False, period: int | None = None) -> list[dict[str, Any]]:
         if max_pages < 1:
             raise ValueError("max_pages must be >= 1")
 
